@@ -15,6 +15,7 @@ jobs:
     - uses: actions/checkout@v1
     - name: Build & Push Image
       run: |
-        docker login -u "" -p 
+        #Adding Secrets below
+        docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }} 
         docker image build -t leoftw/flaskrepopython:latest .
         docker push leoftw/flaskrepopython:latest
