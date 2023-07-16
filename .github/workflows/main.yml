@@ -16,5 +16,5 @@ jobs:
     - name: Build & Push Image
       run: |
         docker login -u "" -p 
-        docker image build -t  .
-        docker push 
+        docker image build -t leoftw/flaskrepopython:latest .
+        docker push leoftw/flaskrepopython:latest
